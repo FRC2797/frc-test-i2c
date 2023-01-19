@@ -53,6 +53,7 @@ public class Robot extends TimedRobot {
         .append(DriverStation.isEnabled() ? "E" : "D")
         .append(DriverStation.isAutonomous() ? "A" : "T")
         .append(String.format("%03d", (int) DriverStation.getMatchTime()));
+        //Placeholder to add modification to this message AEC
 
     writeString(stateMessage.toString());
   }
