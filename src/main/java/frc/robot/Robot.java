@@ -14,8 +14,9 @@ import edu.wpi.first.wpilibj.TimedRobot;
  * code using the roboRIO's I2C port.
  */
 public class Robot extends TimedRobot {
-  static final Port kPort = Port.kOnboard;
-  private static final int kDeviceAddress = 7;
+  //AEC Change the I2C port to use the MXP and device address to 5
+  static final Port kPort = Port.kMXP
+  private static final int kDeviceAddress = 5;
 
   private final I2C m_arduino = new I2C(kPort, kDeviceAddress);
 
