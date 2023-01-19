@@ -15,7 +15,7 @@ import edu.wpi.first.wpilibj.TimedRobot;
  */
 public class Robot extends TimedRobot {
   //AEC Change the I2C port to use the MXP and device address to 5
-  static final Port kPort = Port.kMXP
+  static final Port kPort = Port.kMXP;
   private static final int kDeviceAddress = 5;
 
   private final I2C m_arduino = new I2C(kPort, kDeviceAddress);
@@ -53,7 +53,8 @@ public class Robot extends TimedRobot {
         .append(DriverStation.getAlliance() == DriverStation.Alliance.Red ? "R" : "B")
         .append(DriverStation.isEnabled() ? "E" : "D")
         .append(DriverStation.isAutonomous() ? "A" : "T")
-        .append(String.format("%03d", (int) DriverStation.getMatchTime()));
+        .append(String.format("%03d", (int) DriverStation.getMatchTime()))
+        .append(String.format("%01d", (int) DriverStation.getMatchNumber()));
 
     writeString(stateMessage.toString());
   }
