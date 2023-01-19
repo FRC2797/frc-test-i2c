@@ -15,7 +15,7 @@ import edu.wpi.first.wpilibj.TimedRobot;
  */
 public class Robot extends TimedRobot {
   static final Port kPort = Port.kOnboard;
-  private static final int kDeviceAddress = 4;
+  private static final int kDeviceAddress = 7;
 
   private final I2C m_arduino = new I2C(kPort, kDeviceAddress);
 
